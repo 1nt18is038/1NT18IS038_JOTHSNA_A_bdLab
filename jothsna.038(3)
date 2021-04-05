@@ -1,5 +1,6 @@
 
-
+>use customer
+>db.createCollection("items")
 > db.items.find().pretty()
 { "_id" : 1, "cu_id" : "a123", "amt" : 500, "status" : "a" }
 { "_id" : 2, "cu_id" : "a123", "amt" : 250, "status" : "a" }
