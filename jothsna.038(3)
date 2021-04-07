@@ -27,7 +27,7 @@ Q2)RETRIEVE THE CUSTOMERS WHO HAS MAXIMUM AMOUNT IN ACCOUNT.
 { "_id" : null, "val" : 1050 }
 
 Q3)FOR EACH CUSTOMER COUNT THE NO OF ACCOUNT STATUS.
-->QUERY:db.items.aggregate([{$group:{_id:"$cu_id",value:{$sum:1}}}])
+->QUERY:db.items.aggregate([{$match:{status:"a"}},{$group:{_id:"$cu_id",value:{$sum:1}}}])
 ->Answer
 
 { "_id" : "a123", "value" : 2}
